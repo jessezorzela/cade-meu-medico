@@ -15,6 +15,16 @@ class CreateMedicosTable extends Migration
     {
         Schema::create('medicos', function (Blueprint $table) {
             $table->id();
+            $table->smallInteger('idespecialidade');
+            $table->string('crm');
+            $table->string('nome');
+            $table->string('endereco');
+            $table->string('bairro');
+            $table->integer('idcidade');
+            $table->string('email');
+            $table->boolean('atendeporconvenio')->default(true);
+            $table->boolean('temclinica')->default(true);
+            $table->string('websiteblog');
             $table->timestamps();
         });
     }
